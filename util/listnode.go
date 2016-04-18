@@ -24,3 +24,15 @@ func DisplayList(head *ListNode) {
 		head = head.Next
 	}
 }
+
+func ListEqual(l1 *ListNode, l2 *ListNode) bool {
+	for l1 != nil && l2 != nil {
+		// fmt.Println(l1.Val, l2.Val)
+		if l1.Val != l2.Val {
+			return false
+		}
+		l1 = l1.Next
+		l2 = l2.Next
+	}
+	return l1 == nil && l2 == nil
+}
